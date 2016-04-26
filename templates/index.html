@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<script src="{{ url_for('static', filename='jquery-1.12.2.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='socket.io.js') }}"></script>
+	<script src="{{ url_for('static', filename='moment-with-locales.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+<div class="top-left">
+	<div id="location">北京</div>
+	<div class="weather">
+		<div class="weather-code">
+			<img id="weather-img" src="{{ url_for('static', filename='img/w/99.png') }}">
+			<span id="weather-temp">22</span>&#176;
+		</div>
+		<div class="weather-detail">
+			<div id="weather-text">晴</div>
+			<div><span id="weather-wind">西北风1</span>级</div>
+		</div>
+	</div>
+	<ul class="air-quality">
+		<li class="humidity icon"><span id="humidity">75</span>%</li>
+		<li class="pressure icon"><span id="pressure">954</span> hPa</li>
+		<li class="air icon"><span id="air-quality-level">轻度污染</span><sup id="air-quality-aqi">120</sup></li>
+		<li>PM2.5<sup id="air-quality-pm25">91</sup></li>
+	</ul>
+</div>
+
+<div class="time">
+	<div class="now">
+		<span class="hour"></span>:<span class="minute"></span>:<span class="second"></span>
+	</div>
+	<div class="date"></div>
+</div>
+
+<div class="news">
+	<ul></ul>
+</div>
+</body>
+</html>
